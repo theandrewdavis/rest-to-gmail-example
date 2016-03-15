@@ -90,7 +90,7 @@ class ServerTest < Minitest::Test
                     to: 'to@email.com',
                     refresh_token: 'REFRESH012345'
                 }.to_json
-            elsif File.basename(filename) == 'oauth.json'
+            elsif File.basename(filename) == 'client_id.json'
                 return {
                     installed: {
                         client_id: 'ID012345',

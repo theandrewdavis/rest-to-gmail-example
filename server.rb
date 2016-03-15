@@ -44,7 +44,7 @@ post '/' do
     return status 400 if not params.key?('subject') or not params.key?('body')
 
     config_filepath = File.join(File.dirname(__FILE__), 'secret', 'config.json')
-    oauth_filepath = File.join(File.dirname(__FILE__), 'secret', 'oauth.json')
+    oauth_filepath = File.join(File.dirname(__FILE__), 'secret', 'client_id.json')
     config = JSON.parse(File.read(config_filepath))
     oauth = JSON.parse(File.read(oauth_filepath))
 
