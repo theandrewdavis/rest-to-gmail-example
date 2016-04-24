@@ -17,7 +17,7 @@ Next, we'll need to authorize a GMail account to send emails programmatically. F
     git clone https://github.com/google/gmail-oauth2-tools.git
     python gmail-oauth2-tools/python/oauth2.py --generate_oauth2_token --client_id=???.apps.googleusercontent.com --client_secret=???
 
-This will direct you to a consent website and will provide a code to paste back into the CLI when done. This will give you a refresh token, which out web app can use to authenticate.
+This will direct you to a consent website and will provide a code to paste back into the CLI when done. This will give you a refresh token, which our web app can use to authenticate.
 
 Now we'll configure the web app by giving it the refresh token and telling it where to send its emails. Copy `secret/config.json.example` to `secret/config.json` and fill out `secret/config.json` with the new refresh token, the 'from' email address that you just authenticated, and the 'to' email address where new emails will be sent.
 
@@ -50,7 +50,6 @@ You can run the app's tests with:
     gem install bundler
     bundle install
     bundle exec ruby test.rb
-
 
 And finally, run the app on port 80 with:
 
