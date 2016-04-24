@@ -51,6 +51,10 @@ You can run the app's tests with:
     bundle install
     bundle exec ruby test.rb
 
-And finally, run the app on port 80 with:
+And finally, run the app on port 8000 with:
 
-    sudo bundle exec ruby server.rb -p 80
+    sudo bundle exec ruby server.rb -p 8000
+
+To see it in action, try sending a POST request to the running app:
+
+    curl --data "subject=subj1&body=body1" http://localhost:8000/
